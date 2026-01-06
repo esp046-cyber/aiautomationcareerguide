@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Automation Specialist Career Guide 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 1%;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            padding: 15px 1%;
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            margin-bottom: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        h1 {
+            font-size: 1.3em;
+            font-weight: 700;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 0.85em;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 1%;
+            margin-bottom: 15px;
+            overflow-x: auto;
+            padding: 5px 0;
+        }
+        
+        .tab {
+            flex: 1;
+            min-width: 80px;
+            padding: 12px 8px;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 0.75em;
+            font-weight: 600;
+            transition: all 0.3s;
+            backdrop-filter: blur(5px);
+        }
+        
+        .tab.active {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.05);
+        }
+        
+        .content {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        
+        .content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s;
+        }
+        
+        .card:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+        
+        .card h3 {
+            font-size: 1em;
+            margin-bottom: 8px;
+            color: #ffd700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .card-icon {
+            font-size: 1.2em;
+        }
+        
+        .card p, .card li {
+            font-size: 0.85em;
+            margin-bottom: 8px;
+            opacity: 0.95;
+        }
+        
+        .card ul {
+            margin-left: 18px;
+        }
+        
+        .salary-range {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        
+        .salary-item {
+            flex: 1;
+            background: rgba(255,215,0,0.2);
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .salary-item strong {
+            display: block;
+            font-size: 1.1em;
+            color: #ffd700;
+            margin-bottom: 3px;
+        }
+        
+        .salary-item span {
+            font-size: 0.75em;
+            opacity: 0.9;
+        }
+        
+        .progress-bar {
+            background: rgba(255,255,255,0.2);
+            height: 8px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 8px 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ffd700, #ffed4e);
+            border-radius: 10px;
+            transition: width 0.5s;
+        }
+        
+        .skill-tag {
+            display: inline-block;
+            background: rgba(255,215,0,0.3);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.75em;
+            margin: 4px;
+            border: 1px solid rgba(255,215,0,0.5);
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 15px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -23px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: #ffd700;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255,215,0,0.5);
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: -18px;
+            top: 17px;
+            width: 2px;
+            height: calc(100% + 15px);
+            background: rgba(255,215,0,0.3);
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            color: #667eea;
+            border: none;
+            border-radius: 12px;
+            font-size: 0.9em;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(255,215,0,0.3);
+        }
+        
+        .cta-button:active {
+            transform: scale(0.98);
+        }
+        
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .stat-box {
+            background: rgba(255,255,255,0.1);
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #ffd700;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.7em;
+            opacity: 0.9;
+            margin-top: 3px;
+        }
+        
+        .accordion {
+            margin-bottom: 8px;
+        }
+        
+        .accordion-header {
+            background: rgba(255,255,255,0.1);
+            padding: 12px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 0.85em;
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: rgba(255,255,255,0.05);
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .accordion-content.open {
+            max-height: 500px;
+        }
+        
+        .accordion-content p {
+            padding: 12px;
+        }
+        
+        .arrow {
+            transition: transform 0.3s;
+            font-size: 0.8em;
+        }
+        
+        .arrow.rotate {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 AI Automation Specialist</h1>
+            <div class="subtitle">Your 2026 Filipino Career Guide</div>
+        </header>
+        
+        <div class="tabs">
+            <button class="tab active" data-tab="tab0">Overview</button>
+            <button class="tab" data-tab="tab1">Skills</button>
+            <button class="tab" data-tab="tab2">Salary</button>
+            <button class="tab" data-tab="tab3">Path</button>
+            <button class="tab" data-tab="tab4">Resources</button>
+        </div>
+        
+        <div class="content active" id="tab0">
+            <div class="card">
+                <h3><span class="card-icon">💼</span> What is an AI Automation Specialist?</h3>
+                <p>An AI Automation Specialist designs, implements, and maintains intelligent automation solutions using artificial intelligence and machine learning technologies to streamline business processes and increase efficiency.</p>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">📊</span> Market Demand in PH (2026)</h3>
+                <div class="stat-grid">
+                    <div class="stat-box">
+                        <span class="stat-number">87%</span>
+                        <div class="stat-label">Job Growth Rate</div>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">15K+</span>
+                        <div class="stat-label">Open Positions</div>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">450+</span>
+                        <div class="stat-label">Hiring Companies</div>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">₱85K</span>
+                        <div class="stat-label">Avg Monthly Salary</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">🎯</span> Key Responsibilities</h3>
+                <ul>
+                    <li>Design and deploy AI-powered automation workflows</li>
+                    <li>Integrate RPA tools with AI/ML models</li>
+                    <li>Analyze business processes for automation opportunities</li>
+                    <li>Develop chatbots and virtual assistants</li>
+                    <li>Monitor and optimize automated systems</li>
+                    <li>Collaborate with cross-functional teams</li>
+                    <li>Document automation procedures and best practices</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">🏢</span> Top Hiring Industries</h3>
+                <div class="skill-tag">BPO & Call Centers</div>
+                <div class="skill-tag">Banking & Finance</div>
+                <div class="skill-tag">E-commerce</div>
+                <div class="skill-tag">Healthcare</div>
+                <div class="skill-tag">Tech Startups</div>
+                <div class="skill-tag">Manufacturing</div>
+                <div class="skill-tag">Telecommunications</div>
+                <div class="skill-tag">Insurance</div>
+            </div>
+        </div>
+        
+        <div class="content" id="tab1">
+            <div class="card">
+                <h3><span class="card-icon">💻</span> Technical Skills Required</h3>
+                <div style="margin-bottom: 15px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span style="font-size: 0.8em;">Python Programming</span>
+                        <span style="font-size: 0.75em; opacity: 0.8;">95%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 95%;"></div>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span style="font-size: 0.8em;">RPA Tools (UiPath/Automation Anywhere)</span>
+                        <span style="font-size: 0.75em; opacity: 0.8;">90%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 90%;"></div>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span style="font-size: 0.8em;">Machine Learning Basics</span>
+                        <span style="font-size: 0.75em; opacity: 0.8;">85%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span style="font-size: 0.8em;">API Integration</span>
+                        <span style="font-size: 0.75em; opacity: 0.8;">80%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%;"></div>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span style="font-size: 0.8em;">Cloud Platforms (AWS/Azure/GCP)</span>
+                        <span style="font-size: 0.75em; opacity: 0.8;">75%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%;"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">🛠️</span> Essential Tools & Platforms</h3>
+                <div class="skill-tag">UiPath</div>
+                <div class="skill-tag">Automation Anywhere</div>
+                <div class="skill-tag">Blue Prism</div>
+                <div class="skill-tag">Power Automate</div>
+                <div class="skill-tag">TensorFlow</div>
+                <div class="skill-tag">PyTorch</div>
+                <div class="skill-tag">Selenium</div>
+                <div class="skill-tag">Zapier</div>
+                <div class="skill-tag">Make (Integromat)</div>
+                <div class="skill-tag">OpenAI API</div>
+                <div class="skill-tag">Dialogflow</div>
+                <div class="skill-tag">Docker</div>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">🧠</span> Soft Skills</h3>
+                <ul>
+                    <li>Analytical thinking and problem-solving</li>
+                    <li>Process optimization mindset</li>
+                    <li>Clear communication with stakeholders</li>
+                    <li>Project management abilities</li>
+                    <li>Adaptability to new technologies</li>
+                    <li>Attention to detail and accuracy</li>
+                    <li>Collaborative teamwork</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">📜</span> Recommended Certifications</h3>
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>UiPath Certified Professional</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Industry-standard RPA certification. Cost: $200 | Duration: 2-3 months prep</p>
+                    </div>
+                </div>
+                
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>Microsoft Certified: Azure AI Engineer</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Cloud-based AI solutions. Cost: $165 | Duration: 3-4 months prep</p>
+                    </div>
+                </div>
+                
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>AWS Certified Machine Learning</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>ML on AWS platform. Cost: $300 | Duration: 4-5 months prep</p>
+                    </div>
+                </div>
+                
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>Google Cloud Professional ML Engineer</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>GCP ML expertise. Cost: $200 | Duration: 3-4 months prep</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content" id="tab2">
+            <div class="card">
+                <h3><span class="card-icon">💰</span> Salary Ranges in Philippines (2026)</h3>
+                <div class="salary-range">
+                    <div class="salary-item">
+                        <strong>₱45-60K</strong>
+                        <span>Junior (0-2 yrs)</span>
+                    </div>
+                    <div class="salary-item">
+                        <strong>₱70-95K</strong>
+                        <span>Mid (3-5 yrs)</span>
+                    </div>
+                </div>
+                <div class="salary-range">
+                    <div class="salary-item">
+                        <strong>₱100-150K</strong>
+                        <span>Senior (5+ yrs)</span>
+                    </div>
+                    <div class="salary-item">
+                        <strong>₱160-250K</strong>
+                        <span>Lead/Manager</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">🌍</span> International Remote Rates (USD)</h3>
+                <p style="margin-bottom: 10px;">Filipino AI Automation Specialists working for international clients:</p>
+                <div class="salary-range">
+                    <div class="salary-item">
+                        <strong>$2K-3.5K</strong>
+                        <span>Junior Level</span>
+                    </div>
+                    <div class="salary-item">
+                        <strong>$4K-6.5K</strong>
+                        <span>Mid Level</span>
+                    </div>
+                </div>
+                <div class="salary-range">
+                    <div class="salary-item">
+                        <strong>$7K-12K</strong>
+                        <span>Senior Level</span>
+                    </div>
+                    <div class="salary-item">
+                        <strong>$13K-20K</strong>
+                        <span>Lead/Architect</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">📈</span> Salary Factors</h3>
+                <ul>
+                    <li><strong>Certifications:</strong> +15-25% salary boost</li>
+                    <li><strong>Industry:</strong> Fintech/Banking pays highest</li>
+                    <li><strong>Location:</strong> Metro Manila +20% vs provinces</li>
+                    <li><strong>Company Size:</strong> MNCs pay 30-40% more</li>
+                    <li><strong>Specialization:</strong> AI/ML focus +20-30%</li>
+                    <li><strong>Remote International:</strong> 2-3x local rates</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">🎁</span> Common Benefits Package</h3>
+                <div class="skill-tag">HMO (Family)</div>
+                <div class="skill-tag">Life Insurance</div>
+                <div class="skill-tag">13th Month</div>
+                <div class="skill-tag">Performance Bonus</div>
+                <div class="skill-tag">Training Budget</div>
+                <div class="skill-tag">WFH Setup</div>
+                <div class="skill-tag">Flexible Hours</div>
+                <div class="skill-tag">Certification Sponsorship</div>
+            </div>
+        </div>
+        
+        <div class="content" id="tab3">
+            <div class="card">
+                <h3><span class="card-icon">🎓</span> Educational Background</h3>
+                <p><strong>Ideal Degrees:</strong></p>
+                <ul>
+                    <li>Computer Science / IT</li>
+                    <li>Computer Engineering</li>
+                    <li>Data Science</li>
+                    <li>Information Systems</li>
+                    <li>Industrial Engineering (with tech focus)</li>
+                </ul>
+                <p style="margin-top: 10px;"><strong>Note:</strong> Many successful specialists are self-taught or come from bootcamps!</p>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">🛤️</span> Career Progression Timeline</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <strong style="color: #ffd700;">Year 0-1: Junior Specialist</strong>
+                        <p>Learn RPA tools, assist with bot development, basic automation tasks</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <strong style="color: #ffd700;">Year 2-3: Automation Developer</strong>
+                        <p>Build complete automation solutions, integrate APIs, work independently</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <strong style="color: #ffd700;">Year 4-5: Senior Specialist</strong>
+                        <p>Design complex workflows, mentor juniors, optimize processes</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <strong style="color: #ffd700;">Year 6-8: Lead/Architect</strong>
+                        <p>Strategic planning, team leadership, enterprise solutions</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <strong style="color: #ffd700;">Year 9+: Manager/Head</strong>
+                        <p>Department management, budget oversight, company-wide automation strategy</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">🔀</span> Alternative Career Paths</h3>
+                <ul>
+                    <li><strong>AI/ML Engineer:</strong> Deep dive into machine learning</li>
+                    <li><strong>Solutions Architect:</strong> Design enterprise systems</li>
+                    <li><strong>Business Process Consultant:</strong> Process optimization focus</li>
+                    <li><strong>Data Engineer:</strong> Build data pipelines</li>
+                    <li><strong>Product Manager (Tech):</strong> Lead automation products</li>
+                    <li><strong>Freelance Consultant:</strong> Work with multiple clients</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">📚</span> Learning Path (Beginner to Job-Ready)</h3>
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>Phase 1: Foundations (2-3 months)</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Python basics, SQL, Git, basic algorithms, understand automation concepts</p>
+                    </div>
+                </div>
+                
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>Phase 2: RPA Skills (3-4 months)</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>UiPath/Automation Anywhere training, build 5-10 automation projects, learn web scraping</p>
+                    </div>
+                </div>
+                
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>Phase 3: AI Integration (2-3 months)</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>ML basics, NLP, computer vision, integrate AI models with automation workflows</p>
+                    </div>
+                </div>
+                
+                <div class="accordion">
+                    <div class="accordion-header">
+                        <span>Phase 4: Portfolio & Job Hunt (1-2 months)</span>
+                        <span class="arrow">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Create GitHub portfolio, get certified, apply to jobs, network on LinkedIn</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content" id="tab4">
+            <div class="card">
+                <h3><span class="card-icon">🎓</span> Free Learning Resources</h3>
+                <ul>
+                    <li><strong>UiPath Academy:</strong> Free RPA courses and certifications</li>
+                    <li><strong>Coursera:</strong> AI and automation courses (audit for free)</li>
+                    <li><strong>YouTube Channels:</strong> Mukesh Kala, RPA Tools, The Code City</li>
+                    <li><strong>FreeCodeCamp:</strong> Python and ML courses</li>
+                    <li><strong>Kaggle:</strong> ML practice and competitions</li>
+                    <li><strong>Microsoft Learn:</strong> Free Azure AI courses</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">💼</span> Job Platforms in Philippines</h3>
+                <div class="skill-tag">JobStreet</div>
+                <div class="skill-tag">LinkedIn</div>
+                <div class="skill-tag">Indeed</div>
+                <div class="skill-tag">Kalibrr</div>
+                <div class="skill-tag">BossJobs</div>
+                <div class="skill-tag">OnlineJobs.ph</div>
+                <div class="skill-tag">Remote.co</div>
+                <div class="skill-tag">We Work Remotely</div>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">👥</span> Communities & Networking</h3>
+                <ul>
+                    <li><strong>Facebook Groups:</strong> RPA Philippines, AI/ML PH</li>
+                    <li><strong>LinkedIn Groups:</strong> Automation Professionals PH</li>
+                    <li><strong>Meetup.com:</strong> Manila AI/Automation meetups</li>
+                    <li><strong>Discord:</strong> RPA Developers, ML Philippines</li>
+                    <li><strong>Reddit:</strong> r/rpa, r/MachineLearning</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">🏢</span> Top Hiring Companies in PH</h3>
+                <div class="skill-tag">Accenture</div>
+                <div class="skill-tag">IBM</div>
+                <div class="skill-tag">Concentrix</div>
+                <div class="skill-tag">Cognizant</div>
+                <div class="skill-tag">Teleperformance</div>
+                <div class="skill-tag">Globe Telecom</div>
+                <div class="skill-tag">BDO</div>
+                <div class="skill-tag">Ayala Corporation</div>
+                <div class="skill-tag">UnionBank</div>
+                <div class="skill-tag">SM Investments</div>
+            </div>
+            
+            <div class="card">
+                <h3><span class="card-icon">💡</span> Success Tips</h3>
+                <ul>
+                    <li>Build a strong GitHub portfolio with real projects</li>
+                    <li>Get at least one major certification (UiPath/Azure)</li>
+                    <li>Network actively on LinkedIn (post content, engage)</li>
+                    <li>Practice on real business problems, not just tutorials</li>
+                    <li>Learn both technical and business process skills</li>
+                    <li>Stay updated with latest AI tools and trends</li>
+                    <li>Consider freelancing to build experience quickly</li>
+                    <li>Document your learning journey publicly</li>
+                </ul>
+            </div>
+            
+            <button class="cta-button" id="ctaButton">Start Your Journey Today! 🚀</button>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // TAB SWITCHING
+            const tabButtons = document.querySelectorAll('.tab');
+            const contentSections = document.querySelectorAll('.content');
+            
+            tabButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+                    
+                    // Remove active from all tabs
+                    tabButtons.forEach(function(btn) {
+                        btn.classList.remove('active');
+                    });
+                    
+                    // Remove active from all content
+                    contentSections.forEach(function(section) {
+                        section.classList.remove('active');
+                    });
+                    
+                    // Add active to clicked tab
+                    this.classList.add('active');
+                    
+                    // Show corresponding content
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+            
+            // ACCORDION FUNCTIONALITY
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            
+            accordionHeaders.forEach(function(header) {
+                header.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const arrow = this.querySelector('.arrow');
+                    
+                    // Toggle open class
+                    if (content.classList.contains('open')) {
+                        content.classList.remove('open');
+                        arrow.classList.remove('rotate');
+                    } else {
+                        content.classList.add('open');
+                        arrow.classList.add('rotate');
+                    }
+                });
+            });
+            
+            // CTA BUTTON
+            const ctaButton = document.getElementById('ctaButton');
+            if (ctaButton) {
+                ctaButton.addEventListener('click', function() {
+                    alert('Continue learning and building! Your AI Automation career starts now. Good luck, kabayan! 🚀');
+                });
+            }
+            
+        });
+    </script>
+</body>
+</html>
